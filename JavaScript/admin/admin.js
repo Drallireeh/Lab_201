@@ -18,35 +18,48 @@ $('#date-form').on('submit', onAddPressed);
 const login = document.getElementById('login-div');
 const date_div = document.getElementById('date-div');
 
+let number_of_dates;
+
+db.collection('tour').get().then(snap => {
+    number_of_dates = snap.size;
+});
+
 function updateData(docRef, value) {
+    const order = document.getElementById(value).value;
     const date = document.getElementById('date' + value).value;
     const city = document.getElementById('city' + value).value;
     const country = document.getElementById('country' + value).value;
     const place = document.getElementById('place' + value).value;
-    const complete = document.getElementById('complete' + value).value;
+    let complete = document.getElementById('complete' + value).value;
+
+    if (complete === "true") complete = true;
+    else complete = false;
 
     db.collection('tour').doc(docRef).update({
+        order: parseInt(order),
         date: date,
         city: city,
         country: country,
         place: place,
         complete: complete,
     }).then(function (doc) {
+        displayData();
         console.log("doc : ", doc);
     }).catch(function(error) {
         console.log(error)
-    })
+    });
 }
 
 function displayData() {
-    db.collection("tour").get().then(function (querySnapshot) {
+    db.collection("tour").orderBy("order", "asc").get().then(function (querySnapshot) {
         let html_val = "";
         let increment = 1;
         querySnapshot.forEach(function (doc) {
-            const { date, city, country, place, complete } = doc.data();
+            const { order, date, city, country, place, complete } = doc.data();
             html_val += `
             <div class="list">
             <h2>Date n°${increment}</h2>
+            <strong>Order :</strong> <input type="text" class="form-control" value="${order}" id="${increment}">
             <strong>Date :</strong> <input type="text" class="form-control" value="${date}" id="date${increment}">
             <strong>City :</strong> <input type="text" class="form-control" value="${city}" id="city${increment}">
             <strong>Country :</strong> <input type="text" class="form-control" value="${country}" id="country${increment}">
@@ -97,13 +110,17 @@ function emailPasswordLogin(event) {
 
 function onAddPressed(event) {
     event.preventDefault();
+    number_of_dates++;
 
     const date = document.getElementById('date').value;
     const city = document.getElementById('city').value;
     const country = document.getElementById('country').value;
     const place = document.getElementById('place').value;
 
+    console.log(number_of_dates)
+
     db.collection("tour").add({
+        order: parseInt(number_of_dates),
         date: date,
         city: city,
         country: country,
