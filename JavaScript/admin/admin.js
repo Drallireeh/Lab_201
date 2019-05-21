@@ -32,7 +32,7 @@ function updateData(docRef, value) {
     const place = document.getElementById('place' + value).value;
     let complete = document.getElementById('complete' + value).value;
 
-    if (complete === "true") complete = true;
+    if (complete === "Oui") complete = true;
     else complete = false;
 
     db.collection('tour').doc(docRef).update({
@@ -54,20 +54,24 @@ function displayData() {
     db.collection("tour").orderBy("order", "asc").get().then(function (querySnapshot) {
         let html_val = "";
         let increment = 1;
+        let complet = "Oui";
         querySnapshot.forEach(function (doc) {
             const { order, date, city, country, place, complete } = doc.data();
+            if (complete) complet = "Oui";
+            else complet = "Non";
+
             html_val += `
             <div class="list">
             <h2>Date n°${increment}</h2>
-            <strong>Order :</strong> <input type="text" class="form-control" value="${order}" id="${increment}">
+            <strong>Ordre :</strong> <input type="text" class="form-control" value="${order}" id="${increment}">
             <strong>Date :</strong> <input type="text" class="form-control" value="${date}" id="date${increment}">
-            <strong>City :</strong> <input type="text" class="form-control" value="${city}" id="city${increment}">
-            <strong>Country :</strong> <input type="text" class="form-control" value="${country}" id="country${increment}">
-            <strong>Place :</strong> <input type="text" class="form-control" value="${place}" id="place${increment}">
-            <strong>Complete :</strong> <input type="text" class="form-control" value="${complete}" id="complete${increment}">
+            <strong>Ville :</strong> <input type="text" class="form-control" value="${city}" id="city${increment}">
+            <strong>Pays :</strong> <input type="text" class="form-control" value="${country}" id="country${increment}">
+            <strong>Lieu / Nom de l'évènement :</strong> <input type="text" class="form-control" value="${place}" id="place${increment}">
+            <strong>Complet :</strong> <input type="text" class="form-control" value="${complet}" id="complete${increment}">
             <div>
-                <button onclick="updateData(this.id, ${increment})" type="button" class="btn btn-success" id="${doc.id}">Modify</button>
-                <button onclick="deleteDate(this.id)" type="button" class="btn btn-danger" id="${doc.id}">Delete</button>
+                <button onclick="updateData(this.id, ${increment})" type="button" class="btn btn-success" id="${doc.id}">Modifier</button>
+                <button onclick="deleteDate(this.id)" type="button" class="btn btn-danger" id="${doc.id}">Supprimer</button>
             </div>
             </div>`;
             increment++;
