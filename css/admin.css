@@ -6,3 +6,19 @@
     display: none;
     padding-top: 1rem;
 }
+
+h1 {
+    text-align: center;
+}
+
+.tour_list {
+    padding-left: 5rem;
+}
+
+.list {
+    padding-bottom: 2rem;
+}
+
+.list input {
+    margin-bottom: 1rem;
+}
