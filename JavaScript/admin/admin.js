@@ -18,6 +18,25 @@ $('#date-form').on('submit', onAddPressed);
 const login = document.getElementById('login-div');
 const date_div = document.getElementById('date-div');
 
+function updateData(docRef, value) {
+    const date = document.getElementById('date' + value).value;
+    const city = document.getElementById('city' + value).value;
+    const country = document.getElementById('country' + value).value;
+    const place = document.getElementById('place' + value).value;
+    const complete = document.getElementById('complete' + value).value;
+
+    db.collection('tour').doc(docRef).update({
+        date: date,
+        city: city,
+        country: country,
+        place: place,
+        complete: complete,
+    }).then(function (doc) {
+        console.log("doc : ", doc);
+    }).catch(function(error) {
+        console.log(error)
+    })
+}
 
 function displayData() {
     db.collection("tour").get().then(function (querySnapshot) {
@@ -28,13 +47,13 @@ function displayData() {
             html_val += `
             <div class="list">
             <h2>Date n°${increment}</h2>
-            <strong>Date :</strong> <input type="text" class="form-control" value="${date}">
-            <strong>City :</strong> <input type="text" class="form-control" value="${city}">
-            <strong>Country :</strong> <input type="text" class="form-control" value="${country}">
-            <strong>Place :</strong> <input type="text" class="form-control" value="${place}">
-            <strong>Complete :</strong> <input type="text" class="form-control" value="${complete}">
+            <strong>Date :</strong> <input type="text" class="form-control" value="${date}" id="date${increment}">
+            <strong>City :</strong> <input type="text" class="form-control" value="${city}" id="city${increment}">
+            <strong>Country :</strong> <input type="text" class="form-control" value="${country}" id="country${increment}">
+            <strong>Place :</strong> <input type="text" class="form-control" value="${place}" id="place${increment}">
+            <strong>Complete :</strong> <input type="text" class="form-control" value="${complete}" id="complete${increment}">
             <div>
-                <button type="button" class="btn btn-success">Modify</button>
+                <button onclick="updateData(this.id, ${increment})" type="button" class="btn btn-success" id="${doc.id}">Modify</button>
                 <button onclick="deleteDate(this.id)" type="button" class="btn btn-danger" id="${doc.id}">Delete</button>
             </div>
             </div>`;
@@ -45,9 +64,9 @@ function displayData() {
 }
 
 function deleteDate(id) {
-    db.collection('tour').doc(id).delete().then(function() {
+    db.collection('tour').doc(id).delete().then(function () {
         console.log("delete");
-    }).catch(function(error){
+    }).catch(function (error) {
         console.log("error", error);
     });
     displayData();
