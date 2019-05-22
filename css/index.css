@@ -1,10 +1,18 @@
 #fullpage {
     height: 100vh;
     overflow: hidden;
-  }
+}
   
-  #fullpage section {
-      height: 100vh;
-      font-size: 50px;
-      font-family: 'Rock Salt', cursive;
-  }
+#fullpage section {
+    /* height: 100vh; */
+}
+
+#fullpage section h1{
+    font-size: 50px;
+    font-family: 'Rock Salt', cursive;
+}
+
+#fullpage section p {
+    font-size: 35px;
+    font-family: caviar_dreamsregular;
+}
