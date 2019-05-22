@@ -44,9 +44,13 @@ function updateData(docRef, value) {
         complete: complete,
     }).then(function (doc) {
         displayData();
-        console.log("doc : ", doc);
-    }).catch(function(error) {
-        console.log(error)
+        $('#auth-results').html(`
+                <div class="alert alert-success">Date n°${order} modifiée</div>
+            `);
+    }).catch(function (error) {
+        $('#auth-results').html(`
+                <div class="alert alert-danger">${error.message}</div>
+            `);
     });
 }
 
@@ -82,9 +86,13 @@ function displayData() {
 
 function deleteDate(id) {
     db.collection('tour').doc(id).delete().then(function () {
-        console.log("delete");
+        $('#auth-results').html(`
+                <div class="alert alert-success">Date supprimée</div>
+            `);
     }).catch(function (error) {
-        console.log("error", error);
+        $('#auth-results').html(`
+                <div class="alert alert-danger">${error.message}</div>
+            `);
     });
     displayData();
 }
@@ -98,7 +106,7 @@ function emailPasswordLogin(event) {
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then(function (result) {
             $('#auth-results').html(`
-                <div class="alert alert-success">Connected</div>
+                <div class="alert alert-success">Connexion réussie</div>
             `);
             login.style.display = "none";
             date_div.style.display = "inherit";
@@ -121,8 +129,6 @@ function onAddPressed(event) {
     const country = document.getElementById('country').value;
     const place = document.getElementById('place').value;
 
-    console.log(number_of_dates)
-
     db.collection("tour").add({
         order: parseInt(number_of_dates),
         date: date,
@@ -132,10 +138,14 @@ function onAddPressed(event) {
         complete: getRadioCheckedValue(),
     })
         .then(function (docRef) {
-            console.log("Document written with ID :", docRef.id);
+            $('#auth-results').html(`
+                <div class="alert alert-success">Date ajoutée</div>
+            `);
         })
         .catch(function (error) {
-            console.error("Error adding document :", error);
+            $('#auth-results').html(`
+                <div class="alert alert-danger">${error.message}</div>
+            `);
         });
     displayData();
 }
