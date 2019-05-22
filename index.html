@@ -6,15 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Site</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/template.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+    <script src="Javascript/Libraries/jquery-3.4.1.min.js"></script>
+    <script src='Javascript/Libraries/jquery.fullpage.js'></script>
 </head>
 
 <body>
     <a href="administrateur.html">administateur</a>
 
-    <script src="JavaScript/admin/config.js"></script>
-    <script src="JavaScript/admin/admin.js"></script>
+    <div id="fullpage">
+        <section>1 Rocksalt</section>
+        <section>2 Rocksalt</section>
+        <section>3 Rocksalt</section>
+        <section>4 Rocksalt</section>
+        <section>5 Rocksalt</section>
+    </div>
+
+    <script type="text/javascript">
+        $('#fullpage').fullpage();
+    </script>
 </body>
 
 </html>
