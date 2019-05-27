@@ -1,18 +1,78 @@
 #fullpage {
+    /* padding-top: 1rem; */
     height: 100vh;
     overflow: hidden;
 }
   
-#fullpage section {
-    /* height: 100vh; */
-}
-
-#fullpage section h1{
+h1 {
     font-size: 50px;
     font-family: 'Rock Salt', cursive;
+    word-spacing: 1rem;
 }
 
-#fullpage section p {
-    font-size: 35px;
+p {
     font-family: caviar_dreamsregular;
+}
+
+section {
+    margin-bottom: 0.5rem;
+}
+
+.menu {
+    text-align: center;
+    letter-spacing: 1rem;
+    color: #ECF3B7;
+    position: absolute;
+    top: 2.2rem;
+    right: 2.2rem;
+    z-index: 2;
+}
+
+/*********************************/
+
+.menu h1 {
+    font-size: 26px;
+    padding-bottom: 0.75rem;
+}
+
+#accueil {
+    background-image: url("../Assets/Images/accueil.png");
+    color: #ECF3B7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#accueil #oeuf {
+    position: absolute;
+    top: 7.5rem;
+    left: 6.25rem;
+    z-index: 2;
+}
+
+#accueil #chien {
+    position: absolute;
+    right: 16.9rem;
+    top: 1.6rem;
+    z-index: 0;
+}
+
+#accueil h1 {
+    letter-spacing: 1.5rem;
+    font-size: 100px;
+    text-align: center;
+    z-index: 2;
+}
+
+#presentation-artistes {
+    color: #ECF3B7;
+}
+
+#presentation-artistes p {
+    margin-bottom: 1rem;
+}
+
+#presentation-artistes h1 {
+    font-size: 25px;
+    margin-bottom: 2rem;
 }

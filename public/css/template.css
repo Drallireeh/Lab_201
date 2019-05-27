@@ -65,11 +65,11 @@ table {
 }
 
 /******************************/
+
 body {
-    background-image: url("../Assets/Images/maquette.jpg");
     cursor: url("../Assets/Images/cursor.png"), auto;
 }
 
-p:hover {
+a:hover {
     cursor: url("../Assets/Images/paw.png"), auto;
 }
