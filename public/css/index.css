@@ -126,9 +126,9 @@ p {
 
 #presentation-artistes h1 {
     color: #ECF3B7;
-    font-size: 25px;
+    font-size: 45px;
     margin-bottom: 2rem;
-    line-height: 2.5rem;
+    line-height: 4.28rem;
 }
 
 #vagues {
@@ -149,17 +149,71 @@ p {
 /*************************/
 
 #presentation-album {
-    background-image: url("../Assets/Images/presentation_album.jpg")
+    background-image: url("../Assets/Images/presentation_album.jpg");
+    background-size: 100% 100%;
 }
+
+#presentation-album h1 {
+    color: #265993;
+}
+
+#presentation-album p {
+    color: black;
+}
+
+/************************/
 
 #tracklist {
-    background-image: url("../Assets/Images/tracklist.jpg")
+    background-image: url("../Assets/Images/tracklist.jpg");
+    background-size: 100% 100%;    
 }
 
+#tracklist h1 {
+    text-align: center;
+    color: #f5cd80;
+    margin-bottom: 9.1rem;
+    padding-top: 5rem;
+}
+
+#tracklist h2 {
+    color: white;
+    font-size: 35px;
+    margin-bottom: 3.9rem;
+}
+
+#tracklist h2:hover {
+    cursor: url("../Assets/Images/paw.png"), auto;
+}
+
+#tracklist .tracklist-container {
+    display: flex;
+    justify-content: space-around;
+    /* margin-left: 8.5rem; */
+}
+
+#tracklist .tracklist-container #first-part,
+#tracklist .tracklist-container #second-part {
+    display: flex;
+    flex-direction: column;
+}
+
+#tracklist .tracklist-container #first-part {
+    align-items: flex-end;
+}
+
+#tracklist .tracklist-container #second-part {
+    align-items: flex-start;
+}
+
+/*************************/
+
 #festivals {
-    background-image: url("../Assets/Images/fetivals.jpg")
+    background-image: url("../Assets/Images/fetivals.jpg");
+    background-size: 100% 100%;
 }
 
 #footer {
-    background-image: url("../Assets/Images/footer.jpg")
+    background-image: url("../Assets/Images/footer.jpg");
+    background-size: 100% 100%;
+
 }
