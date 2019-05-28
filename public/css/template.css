@@ -67,9 +67,14 @@ table {
 /******************************/
 
 body {
-    cursor: url("../Assets/Images/cursor.png"), auto;
+	cursor: url("../Assets/Images/cursor.png"), auto;
 }
 
 a:hover {
     cursor: url("../Assets/Images/paw.png"), auto;
+}
+
+strong {
+	font-family: caviar_dreamsbold;
+    font-style: bold;
 }
