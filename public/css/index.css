@@ -29,6 +29,11 @@ p {
     padding-bottom: 0.5rem;
 }
 
+a:hover {
+    cursor: url("../Assets/Images/paw.png"), auto;
+    width: 100%;
+}
+
 /********************************/
 
 .menu {
@@ -85,11 +90,6 @@ p {
     z-index: 2;
 }
 
-#accueil .nuages {
-    margin-top: 4rem;
-    z-index: 0;
-}
-
 /*********PRESENTATION***********/
 
 .presentation {
@@ -130,6 +130,18 @@ p {
     margin-bottom: 2rem;
     line-height: 4.28rem;
 }
+
+#presentation-artistes #cubes {
+    position: absolute;
+    left: 19.43rem;
+    top: -4rem;
+    z-index: 3;
+}
+
+/* #presentation-artistes #cubes img {
+    height: 400px;
+    width: auto;
+} */
 
 #vagues {
     position: absolute;
@@ -221,7 +233,7 @@ p {
 #tracklist h2 {
     color: white;
     font-size: 35px;
-    margin-bottom: 3.9rem;
+    margin-bottom: 5rem;
 }
 
 #tracklist h2:hover {
@@ -255,6 +267,18 @@ p {
     z-index: 2;
 }
 
+#tracklist #fish-1 {
+    position: absolute;
+    right: 14.125rem;
+    bottom: 17.5rem;
+}
+
+#tracklist #fish-2 {
+    position: absolute;
+    left: 10.25rem;
+    bottom: 4.93rem;
+}
+
 /*************************/
 
 #festivals {
@@ -262,12 +286,52 @@ p {
     background-size: 100% 100%;
 }
 
+/*************************/
+
 #footer {
     background-image: url("../Assets/Images/footer.jpg");
     background-size: 100% 100%;
 }
 
-#footer .poteau {
+#footer a {
+    display: block;
+}
+
+#footer #poteau {
     position: absolute;
-    bottom: 8.3rem; 
+    bottom: 8.3rem;
+    left: 29rem;
+    z-index: 0;
+}
+
+#footer #cracki {
+    position: absolute;
+    left: 25.2rem;
+    bottom: 39.625rem;
+    z-index: 1;
+}
+
+#footer #boutique {
+    position: absolute;
+    left: 39.875rem;
+    bottom: 36.75rem;
+    z-index: 1;
+}
+
+#footer #instagram {
+    position: absolute;
+    right: 23.25rem;
+    bottom: 12.31rem;
+}
+
+#footer #facebook {
+    position: absolute;
+    right: 19.31rem;
+    bottom: 10.31rem;
+}
+
+#footer #soundcloud {
+    position: absolute;
+    right: 14.875rem;
+    bottom: 8.31rem;
 }
