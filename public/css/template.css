@@ -67,11 +67,11 @@ table {
 /******************************/
 
 body {
-	cursor: url("../Assets/Images/cursor.png"), auto;
+	cursor: url("../Assets/Images/cursors/cursor.png"), auto;
 }
 
 a:hover {
-    cursor: url("../Assets/Images/paw.png"), auto;
+    cursor: url("../Assets/Images/cursors/cursor_hover.png"), auto;
 }
 
 strong {

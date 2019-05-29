@@ -1,5 +1,4 @@
 #fullpage {
-    /* padding-top: 1rem; */
     height: 100vh;
     overflow: hidden;
 }
@@ -26,11 +25,10 @@ p {
 #fullpage section {
     position: relative;
     height: 100vh;
-    padding-bottom: 0.5rem;
 }
 
 a:hover {
-    cursor: url("../Assets/Images/paw.png"), auto;
+    cursor: url("../Assets/Images/cursors/cursor_hover.png"), auto;
     width: 100%;
 }
 
@@ -54,7 +52,7 @@ a:hover {
 /*********ACCUEIL************/
 
 #accueil {
-    background-image: url("../Assets/Images/accueil.jpg");
+    background-image: url("../Assets/Images/backgrounds/accueil.jpg");
     background-size: 100% 100%;
     color: #ECF3B7;
     display: flex;
@@ -106,7 +104,7 @@ a:hover {
 }
 
 #presentation-artistes {
-    background-image: url("../Assets/Images/presentation_bg.jpg");
+    background-image: url("../Assets/Images/backgrounds/presentation_bg.jpg");
     background-size: 100% 100%;
     z-index: 0;
 }
@@ -138,11 +136,6 @@ a:hover {
     z-index: 3;
 }
 
-/* #presentation-artistes #cubes img {
-    height: 400px;
-    width: auto;
-} */
-
 #vagues {
     position: absolute;
     bottom: 0rem;
@@ -152,7 +145,7 @@ a:hover {
 
 #nuages-pres {
     position: absolute;
-    bottom: -5rem;
+    bottom: -0.25rem;
     width: 100%;
     z-index: 2;
 }
@@ -160,7 +153,7 @@ a:hover {
 /*************************/
 
 #presentation-album {
-    background-image: url("../Assets/Images/presentation_album.jpg");
+    background-image: url("../Assets/Images/backgrounds/presentation_album.jpg");
     background-size: 100% 100%;
 }
 
@@ -215,10 +208,17 @@ a:hover {
     right: 12.125rem;
 }
 
+#nuages-album {
+    position: absolute;
+    top: -0.25rem;
+    width: 100%;
+    z-index: 2;
+}
+
 /************************/
 
 #tracklist {
-    background-image: url("../Assets/Images/tracklist.jpg");
+    background-image: url("../Assets/Images/backgrounds/tracklist.jpg");
     background-size: 100% 100%;
     z-index: 1;
 }
@@ -237,13 +237,12 @@ a:hover {
 }
 
 #tracklist h2:hover {
-    cursor: url("../Assets/Images/paw.png"), auto;
+    cursor: url("../Assets/Images/cursors/cursor_hover.png"), auto;
 }
 
 #tracklist .tracklist-container {
     display: flex;
     justify-content: space-around;
-    /* margin-left: 8.5rem; */
 }
 
 #tracklist .tracklist-container #first-part,
@@ -262,7 +261,7 @@ a:hover {
 
 #tracklist #rubikscube {
     position: absolute;
-    top: -8rem;
+    top: -7.5rem;
     right: 20.56rem;
     z-index: 2;
 }
@@ -282,24 +281,20 @@ a:hover {
 /*************************/
 
 #festivals {
-    background-image: url("../Assets/Images/fetivals.jpg");
+    background-image: url("../Assets/Images/backgrounds/fetivals.jpg");
     background-size: 100% 100%;
 }
 
 /*************************/
 
 #footer {
-    background-image: url("../Assets/Images/footer.jpg");
+    background-image: url("../Assets/Images/backgrounds/footer.jpg");
     background-size: 100% 100%;
-}
-
-#footer a {
-    display: block;
 }
 
 #footer #poteau {
     position: absolute;
-    bottom: 8.3rem;
+    bottom: 6.3rem;
     left: 29rem;
     z-index: 0;
 }
@@ -307,31 +302,31 @@ a:hover {
 #footer #cracki {
     position: absolute;
     left: 25.2rem;
-    bottom: 39.625rem;
+    bottom: 37.625rem;
     z-index: 1;
 }
 
 #footer #boutique {
     position: absolute;
     left: 39.875rem;
-    bottom: 36.75rem;
+    bottom: 34.75rem;
     z-index: 1;
 }
 
 #footer #instagram {
     position: absolute;
     right: 23.25rem;
-    bottom: 12.31rem;
+    bottom: 12rem;
 }
 
 #footer #facebook {
     position: absolute;
     right: 19.31rem;
-    bottom: 10.31rem;
+    bottom: 10rem;
 }
 
 #footer #soundcloud {
     position: absolute;
     right: 14.875rem;
-    bottom: 8.31rem;
+    bottom: 8rem;
 }
