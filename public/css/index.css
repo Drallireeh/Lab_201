@@ -161,7 +161,7 @@ p {
 #presentation-album p {
     color: black;
     font-size: 22px;
-    max-width: 850px;
+    max-width: 860px;
     padding-left: 3.25rem;
     padding-right: 2.8rem;
     padding-bottom: 2rem;
@@ -185,18 +185,37 @@ p {
     margin-right: 6.375rem;
 }
 
+#presentation-album #cover-one {
+    position: absolute;
+    bottom: 41.125rem;
+    right: 43.06rem;
+}
+
+#presentation-album #cover-two {
+    position: absolute;
+    bottom: 45.5rem;
+    right: 22.81rem;
+}
+
+#presentation-album #cover-three {
+    position: absolute;
+    bottom: 35.375rem;
+    right: 12.125rem;
+}
+
 /************************/
 
 #tracklist {
     background-image: url("../Assets/Images/tracklist.jpg");
     background-size: 100% 100%;
+    z-index: 1;
 }
 
 #tracklist h1 {
     text-align: center;
     color: #f5cd80;
     margin-bottom: 9.1rem;
-    padding-top: 5rem;
+    padding-top: 8rem;
 }
 
 #tracklist h2 {
@@ -227,6 +246,13 @@ p {
 
 #tracklist .tracklist-container #second-part {
     align-items: flex-start;
+}
+
+#tracklist #rubikscube {
+    position: absolute;
+    top: -8rem;
+    right: 20.56rem;
+    z-index: 2;
 }
 
 /*************************/
