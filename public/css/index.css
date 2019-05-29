@@ -3,7 +3,7 @@
     height: 100vh;
     overflow: hidden;
 }
-  
+
 h1 {
     font-size: 50px;
     font-family: 'Rock Salt', cursive;
@@ -142,7 +142,6 @@ p {
     position: absolute;
     bottom: -5rem;
     width: 100%;
-    height: 10px;
     z-index: 2;
 }
 
@@ -155,17 +154,42 @@ p {
 
 #presentation-album h1 {
     color: #265993;
+    padding: 2.68rem 0rem 1.5rem 3.25rem;
+    line-height: 4.75rem;
 }
 
 #presentation-album p {
     color: black;
+    font-size: 22px;
+    max-width: 850px;
+    padding-left: 3.25rem;
+    padding-right: 2.8rem;
+    padding-bottom: 2rem;
+}
+
+#album-container {
+    height: inherit;
+    display: flex;
+    align-items: flex-end;
+}
+
+#album-container .text{
+    background-color: rgba(255, 255, 255, 0.4);
+    margin-right: 10.625rem;
+    margin-bottom: 4.125rem;
+    max-height: 639px;
+}
+
+#album-container .img-div {
+    margin-left: 3.625rem;
+    margin-right: 6.375rem;
 }
 
 /************************/
 
 #tracklist {
     background-image: url("../Assets/Images/tracklist.jpg");
-    background-size: 100% 100%;    
+    background-size: 100% 100%;
 }
 
 #tracklist h1 {
@@ -215,5 +239,9 @@ p {
 #footer {
     background-image: url("../Assets/Images/footer.jpg");
     background-size: 100% 100%;
+}
 
+#footer .poteau {
+    position: absolute;
+    bottom: 8.3rem; 
 }
