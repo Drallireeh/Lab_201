@@ -8,10 +8,10 @@ h2 {
     font-family: 'Rock Salt', cursive;
     word-spacing: 0.5rem;
 }
-
+/* 
 em {
     color: #f5cd80;
-}
+} */
 
 p, a {
     font-family: caviar_dreamsregular;
@@ -27,7 +27,7 @@ a:hover {
     width: 100%;
 }
 
-/********************************/
+/*********MENU***********/
 
 .menu {
     text-align: center;
@@ -55,25 +55,42 @@ a:hover {
 .menu #menu-div {
     display: none;
     /* background-color: rgba(255, 255, 255, 0.2); */
-    flex-direction: column;
-    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
 }
 
 .menu #menu-div div {
     letter-spacing: 0rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .menu #menu-div div:nth-of-type(2),
 .menu #menu-div div:nth-of-type(4) {
-    align-self: flex-end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
 }
 
 .menu #menu-div a {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     color: black;
     text-shadow: white 0.1em 0.1em 0.2em;
     text-decoration: none;
@@ -97,9 +114,15 @@ a:hover {
     background-image: url("../Assets/Images/backgrounds/accueil.jpg");
     background-size: 100% 100%;
     color: #ECF3B7;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 #accueil #oeuf {
@@ -130,13 +153,19 @@ a:hover {
     z-index: 2;
 }
 
-/*********PRESENTATION***********/
+/*********PRES ARTISTES***********/
 
 .presentation {
     height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .presentation .portrait {
@@ -192,7 +221,7 @@ a:hover {
     z-index: 2;
 }
 
-/*************************/
+/******PRES ALBUM*********/
 
 #presentation-album {
     background-image: url("../Assets/Images/backgrounds/presentation_album.jpg");
@@ -216,8 +245,12 @@ a:hover {
 
 #album-container {
     height: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
 }
 
 #album-container .text{
@@ -236,55 +269,90 @@ a:hover {
     position: absolute;
     bottom: 41.125rem;
     right: 43.06rem;
-    animation-name: cover_one;
-    animation-duration: 16s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease;
+    -webkit-animation-name: cover_one;
+            animation-name: cover_one;
+    -webkit-animation-duration: 16s;
+            animation-duration: 16s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+}
+
+@-webkit-keyframes cover_one {
+    0%   {right:43.06rem; bottom:41.125rem;}
+    25%   {right:43.06rem; bottom:42.125rem; -webkit-transform: rotate(10deg); transform: rotate(10deg)}
+    50%  {right:43.06rem; bottom:41.125rem;}
+    75%   {right:43.06rem; bottom:42.125rem; -webkit-transform: rotate(-10deg); transform: rotate(-10deg)}
+    100% {right:43.06rem; bottom:41.125rem; -webkit-transform: rotate(0deg); transform: rotate(0deg)}
 }
 
 @keyframes cover_one {
     0%   {right:43.06rem; bottom:41.125rem;}
-    25%   {right:43.06rem; bottom:42.125rem; transform: rotate(10deg)}
+    25%   {right:43.06rem; bottom:42.125rem; -webkit-transform: rotate(10deg); transform: rotate(10deg)}
     50%  {right:43.06rem; bottom:41.125rem;}
-    75%   {right:43.06rem; bottom:42.125rem; transform: rotate(-10deg)}
-    100% {right:43.06rem; bottom:41.125rem; transform: rotate(0deg)}
+    75%   {right:43.06rem; bottom:42.125rem; -webkit-transform: rotate(-10deg); transform: rotate(-10deg)}
+    100% {right:43.06rem; bottom:41.125rem; -webkit-transform: rotate(0deg); transform: rotate(0deg)}
 }
 
 #presentation-album #cover-two {
     position: absolute;
     bottom: 45.5rem;
     right: 22.81rem;
-    animation-name: cover_two;
-    animation-duration: 16s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    -webkit-animation-name: cover_two;
+            animation-name: cover_two;
+    -webkit-animation-duration: 16s;
+            animation-duration: 16s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+}
+
+@-webkit-keyframes cover_two {
+    0%   {right:22.81rem; bottom:45.5rem;}
+    25%   {right:22.81rem; bottom:46.5rem; -webkit-transform: rotate(-10deg); transform: rotate(-10deg)}
+    50%  {right:22.81rem; bottom:45.5rem;}
+    75%   {right:22.81rem; bottom:46.5rem; -webkit-transform: rotate(10deg); transform: rotate(10deg)}
+    100% {right:22.81rem; bottom:45.5rem; -webkit-transform: rotate(0deg); transform: rotate(0deg)}
 }
 
 @keyframes cover_two {
     0%   {right:22.81rem; bottom:45.5rem;}
-    25%   {right:22.81rem; bottom:46.5rem; transform: rotate(-10deg)}
+    25%   {right:22.81rem; bottom:46.5rem; -webkit-transform: rotate(-10deg); transform: rotate(-10deg)}
     50%  {right:22.81rem; bottom:45.5rem;}
-    75%   {right:22.81rem; bottom:46.5rem; transform: rotate(10deg)}
-    100% {right:22.81rem; bottom:45.5rem; transform: rotate(0deg)}
+    75%   {right:22.81rem; bottom:46.5rem; -webkit-transform: rotate(10deg); transform: rotate(10deg)}
+    100% {right:22.81rem; bottom:45.5rem; -webkit-transform: rotate(0deg); transform: rotate(0deg)}
 }
-
 
 #presentation-album #cover-three {
     position: absolute;
     bottom: 35.375rem;
     right: 12.125rem;
-    animation-name: cover_three;
-    animation-duration: 16s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    -webkit-animation-name: cover_three;
+            animation-name: cover_three;
+    -webkit-animation-duration: 16s;
+            animation-duration: 16s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+}
+
+@-webkit-keyframes cover_three {
+    0%   {right:12.125rem; bottom:35.375;}
+    25%   {right:12.125rem; bottom:37.375rem; -webkit-transform: rotate(10deg); transform: rotate(10deg)}
+    50%  {right:12.125rem; bottom:35.375;}
+    75%   {right:12.125rem; bottom:37.375rem; -webkit-transform: rotate(-10deg); transform: rotate(-10deg)}
+    100% {right:12.125rem; bottom:35.375; -webkit-transform: rotate(0deg); transform: rotate(0deg)}
 }
 
 @keyframes cover_three {
     0%   {right:12.125rem; bottom:35.375;}
-    25%   {right:12.125rem; bottom:37.375rem; transform: rotate(10deg)}
+    25%   {right:12.125rem; bottom:37.375rem; -webkit-transform: rotate(10deg); transform: rotate(10deg)}
     50%  {right:12.125rem; bottom:35.375;}
-    75%   {right:12.125rem; bottom:37.375rem; transform: rotate(-10deg)}
-    100% {right:12.125rem; bottom:35.375; transform: rotate(0deg)}
+    75%   {right:12.125rem; bottom:37.375rem; -webkit-transform: rotate(-10deg); transform: rotate(-10deg)}
+    100% {right:12.125rem; bottom:35.375; -webkit-transform: rotate(0deg); transform: rotate(0deg)}
 }
 
 #nuages-album {
@@ -294,7 +362,7 @@ a:hover {
     z-index: 2;
 }
 
-/************************/
+/*******TRACKLIST********/
 
 #tracklist {
     background-image: url("../Assets/Images/backgrounds/tracklist.jpg");
@@ -308,31 +376,41 @@ a:hover {
     margin-bottom: 7rem;
     padding-top: 8rem;
 }
-
+/* 
 #tracklist h2 {
     color: white;
     font-size: 35px;
     margin-bottom: 5rem;
-}
-
+} */
+/* 
 #tracklist h2:hover {
     cursor: url("../Assets/Images/cursors/cursor_hover.png"), auto;
-}
+} */
 
 #tracklist .tracklist-container {
     z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
 }
 
 #tracklist .tracklist-container #first-part,
 #tracklist .tracklist-container #second-part {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 #tracklist .tracklist-container #first-part {
-    align-items: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
 }
 
 #tracklist .tracklist-container #first-part div,
@@ -341,7 +419,9 @@ a:hover {
 }
 
 #tracklist .tracklist-container #second-part {
-    align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
 }
 
 #tracklist .gif-apercu {
@@ -364,31 +444,45 @@ a:hover {
     position: absolute;
     right: 14.125rem;
     bottom: 17.5rem;
-    animation-name: fish;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    -webkit-animation-name: fish;
+            animation-name: fish;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
 }
 
 #tracklist #fish-2 {
     position: absolute;
     left: 10.25rem;
     bottom: 4.93rem;
-    animation-name: fish;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    -webkit-animation-name: fish;
+            animation-name: fish;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
 }
-
+/* 
 #tracklist #fish-1:hover,
 #tracklist #fish-2:hover {
     cursor: url("../Assets/Images/cursors/cursor_hover.png"), auto;
+} */
+
+@-webkit-keyframes fish {
+    0%   {-webkit-transform: rotate(45deg);transform: rotate(45deg)}
+    50% {-webkit-transform: rotate(-45deg);transform: rotate(-45deg)}
+    100% {-webkit-transform: rotate(45deg);transform: rotate(45deg)}
 }
 
 @keyframes fish {
-    0%   {transform: rotate(45deg)}
-    50% {transform: rotate(-45deg)}
-    100% {transform: rotate(45deg)}
+    0%   {-webkit-transform: rotate(45deg);transform: rotate(45deg)}
+    50% {-webkit-transform: rotate(-45deg);transform: rotate(-45deg)}
+    100% {-webkit-transform: rotate(45deg);transform: rotate(45deg)}
 }
 
 /*************************/
@@ -408,8 +502,13 @@ a:hover {
 }
 
 #festivals #dates-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 #festivals .dates {
@@ -425,7 +524,8 @@ a:hover {
 
 #festivals #dates-list .dates:nth-of-type(2),
 #festivals #dates-list .dates:nth-of-type(4) {
-    align-self: flex-end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
     padding-right: 15.31rem;
     margin-top: -3rem;
 }
