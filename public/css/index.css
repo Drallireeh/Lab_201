@@ -49,6 +49,39 @@ a:hover {
     padding-bottom: 0.75rem;
 }
 
+.menu button {
+    background-color: Transparent;
+    border: none;
+    cursor: url("../Assets/Images/cursors/cursor_hover.png"), auto;
+}
+
+/* .menu button:active {
+    border-color: transparent;
+    border: none;
+} */
+
+.menu #menu-div {
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.menu #menu-div a {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    z-index: 1;
+}
+
+.menu #menu-div img {
+    z-index: 0;
+}
+
+.menu #menu-div div:nth-of-type(2),
+.menu #menu-div div:nth-of-type(4) {
+    align-self: flex-end;
+}
+
 /*********ACCUEIL************/
 
 #accueil {
@@ -278,11 +311,59 @@ a:hover {
     bottom: 4.93rem;
 }
 
+#tracklist #fish-1:hover,
+#tracklist #fish-2:hover {
+    cursor: url("../Assets/Images/cursors/cursor_hover.png"), auto;
+}
+
 /*************************/
 
 #festivals {
     background-image: url("../Assets/Images/backgrounds/fetivals.jpg");
     background-size: 100% 100%;
+    color: white;
+}
+
+#festivals h1 {
+    text-align: center;
+    color: #dd999c;
+    font-size: 45px;
+    padding-top: 5.375rem;
+    padding-bottom: 5.68rem;
+}
+
+#festivals #dates-list {
+    display: flex;
+    flex-direction: column;
+}
+
+#festivals .dates {
+    text-align: right;
+    font-size: 35px;
+    padding-right: 66.81rem;
+    margin-top: -3rem;
+}
+
+#festivals .dates:nth-of-type(1) {
+    margin-top: 0rem;
+}
+
+#festivals #dates-list .dates:nth-of-type(2),
+#festivals #dates-list .dates:nth-of-type(4) {
+    align-self: flex-end;
+    padding-right: 15.31rem;
+    margin-top: -3rem;
+}
+
+#festivals strong {
+    padding-right: 4.75rem;
+}
+
+#festivals #location {
+    color: #eea71e;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
 /*************************/

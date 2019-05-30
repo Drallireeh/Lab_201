@@ -18,9 +18,41 @@
 
     <div class="menu">
         <h1>MENU</h1>
-        <a href="">
+        <button id="menu-button" type="menu">
             <img src="Assets/Images/menu/oeuf_menu.png" alt="Oeuf du menu">
-        </a>
+        </button>
+        <!-- <a href="">
+            <img src="Assets/Images/menu/oeuf_menu.png" alt="Oeuf du menu">
+        </a> -->
+        <div id="menu-div">
+            <div>
+                <a href="#presentation-artistes">
+
+                    <img src="Assets/Images/menu/coquille1.png" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="">
+
+                    <img src="Assets/Images/menu/coquille2.png" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="">
+                    <img src="Assets/Images/menu/coquille3.png" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="">
+                    <img src="Assets/Images/menu/coquille4.png" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="">
+                    <img src="" alt="">
+                </a>
+            </div>
+        </div>
     </div>
 
     <div id="fullpage" class="main">
@@ -129,7 +161,10 @@
             </div>
         </section>
         <section id="festivals">
+            <h1>CONCERTS & FESTIVALS</h1>
+            <div id="dates-list">
 
+            </div>
         </section>
         <section id="footer">
             <div id="poteau-div">
@@ -175,6 +210,10 @@
     <script>
         $('#fullpage').fullpage();
     </script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-firestore.js"></script>
+    <script src="JavaScript/admin/admin.js"></script>
+    <script src="JavaScript/index.js"></script>
 </body>
 
 </html>

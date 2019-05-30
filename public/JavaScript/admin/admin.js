@@ -156,3 +156,25 @@ function getRadioCheckedValue() {
     if (radios[0].checked) return true;
     else return false;
 }
+
+function displayOnWebsite() {
+    db.collection("tour").orderBy("order", "asc").get().then(function (querySnapshot) {
+        let html_val = "";
+        querySnapshot.forEach(function (doc) {
+            const { date, city, country, place } = doc.data();
+            html_val += `
+            <div class="dates">
+            <p><strong>${date}</strong> ${place.split(",")[1]}</p>
+            <p id="location">${city} (${country})</p>
+            <div>
+            <a href="" target="_blank">
+                <img src="../../Assets/Images/bouton_reserver.png" alt="bouton réserver">
+            </a>
+            </div>
+            </div>`;
+        });
+        $('#dates-list').html(html_val);
+    });
+}
+
+displayOnWebsite();
