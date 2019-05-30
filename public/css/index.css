@@ -48,7 +48,8 @@ a:hover {
     background-color: Transparent;
     border: none;
     cursor: url("../Assets/Images/cursors/cursor_hover.png"), auto;
-    margin-bottom: 0.1rem; 
+    margin-bottom: 0.1rem;
+    outline:none;
 }
 
 .menu #menu-div {
@@ -73,7 +74,8 @@ a:hover {
 .menu #menu-div a {
     display: flex;
     align-items: center;
-    color: white;
+    color: black;
+    text-shadow: white 0.1em 0.1em 0.2em;
     text-decoration: none;
     font-weight: bold;
     margin-bottom: 0.5rem;
@@ -234,18 +236,55 @@ a:hover {
     position: absolute;
     bottom: 41.125rem;
     right: 43.06rem;
+    animation-name: cover_one;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+@keyframes cover_one {
+    0%   {right:43.06rem; bottom:41.125rem;}
+    25%   {right:43.06rem; bottom:42.125rem; transform: rotate(10deg)}
+    50%  {right:43.06rem; bottom:41.125rem;}
+    75%   {right:43.06rem; bottom:42.125rem; transform: rotate(-10deg)}
+    100% {right:43.06rem; bottom:41.125rem; transform: rotate(0deg)}
 }
 
 #presentation-album #cover-two {
     position: absolute;
     bottom: 45.5rem;
     right: 22.81rem;
+    animation-name: cover_two;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
+
+@keyframes cover_two {
+    0%   {right:22.81rem; bottom:45.5rem;}
+    25%   {right:22.81rem; bottom:46.5rem; transform: rotate(-10deg)}
+    50%  {right:22.81rem; bottom:45.5rem;}
+    75%   {right:22.81rem; bottom:46.5rem; transform: rotate(10deg)}
+    100% {right:22.81rem; bottom:45.5rem; transform: rotate(0deg)}
+}
+
 
 #presentation-album #cover-three {
     position: absolute;
     bottom: 35.375rem;
     right: 12.125rem;
+    animation-name: cover_three;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes cover_three {
+    0%   {right:12.125rem; bottom:35.375;}
+    25%   {right:12.125rem; bottom:37.375rem; transform: rotate(10deg)}
+    50%  {right:12.125rem; bottom:35.375;}
+    75%   {right:12.125rem; bottom:37.375rem; transform: rotate(-10deg)}
+    100% {right:12.125rem; bottom:35.375; transform: rotate(0deg)}
 }
 
 #nuages-album {
