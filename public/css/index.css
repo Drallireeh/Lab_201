@@ -305,7 +305,7 @@ a:hover {
 #tracklist h1 {
     text-align: center;
     color: #f5cd80;
-    margin-bottom: 9.1rem;
+    margin-bottom: 7rem;
     padding-top: 8rem;
 }
 
@@ -320,6 +320,7 @@ a:hover {
 }
 
 #tracklist .tracklist-container {
+    z-index: 1;
     display: flex;
     justify-content: space-around;
 }
@@ -334,8 +335,22 @@ a:hover {
     align-items: flex-end;
 }
 
+#tracklist .tracklist-container #first-part div,
+#tracklist .tracklist-container #second-part div {
+    margin-bottom: 1rem;
+}
+
 #tracklist .tracklist-container #second-part {
     align-items: flex-start;
+}
+
+#tracklist .gif-apercu {
+    position: absolute;
+}
+
+#tracklist .tracklist-container .gif-apercu:hover {
+    cursor: url("../Assets/Images/cursors/cursor_hover.png"), auto;
+    opacity:0;
 }
 
 #tracklist #rubikscube {
@@ -349,17 +364,31 @@ a:hover {
     position: absolute;
     right: 14.125rem;
     bottom: 17.5rem;
+    animation-name: fish;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 #tracklist #fish-2 {
     position: absolute;
     left: 10.25rem;
     bottom: 4.93rem;
+    animation-name: fish;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 #tracklist #fish-1:hover,
 #tracklist #fish-2:hover {
     cursor: url("../Assets/Images/cursors/cursor_hover.png"), auto;
+}
+
+@keyframes fish {
+    0%   {transform: rotate(45deg)}
+    50% {transform: rotate(-45deg)}
+    100% {transform: rotate(45deg)}
 }
 
 /*************************/
