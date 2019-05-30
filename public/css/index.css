@@ -1,8 +1,3 @@
-#fullpage {
-    height: 100vh;
-    overflow: hidden;
-}
-
 h1 {
     font-size: 50px;
     font-family: 'Rock Salt', cursive;
@@ -18,11 +13,11 @@ em {
     color: #f5cd80;
 }
 
-p {
+p, a {
     font-family: caviar_dreamsregular;
 }
 
-#fullpage section {
+#main section {
     position: relative;
     height: 100vh;
 }
@@ -53,33 +48,45 @@ a:hover {
     background-color: Transparent;
     border: none;
     cursor: url("../Assets/Images/cursors/cursor_hover.png"), auto;
+    margin-bottom: 0.1rem; 
 }
 
-/* .menu button:active {
-    border-color: transparent;
-    border: none;
-} */
-
 .menu #menu-div {
-    /* display: none; */
-    display: flex;
+    display: none;
+    /* background-color: rgba(255, 255, 255, 0.2); */
     flex-direction: column;
     align-items: flex-start;
 }
 
-.menu #menu-div a {
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    z-index: 1;
-}
-
-.menu #menu-div img {
-    z-index: 0;
+.menu #menu-div div {
+    letter-spacing: 0rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .menu #menu-div div:nth-of-type(2),
 .menu #menu-div div:nth-of-type(4) {
     align-self: flex-end;
+}
+
+.menu #menu-div a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+} 
+
+.menu #menu-div a img {
+    padding-right: 1rem;
+}
+
+.menu #menu-div div:nth-of-type(2) img,
+.menu #menu-div div:nth-of-type(4) img{
+    padding-right: 0rem;
+    padding-left: 1rem;
 }
 
 /*********ACCUEIL************/
@@ -136,33 +143,33 @@ a:hover {
     z-index: 1;
 }
 
-#presentation-artistes {
+.presentation-artistes {
     background-image: url("../Assets/Images/backgrounds/presentation_bg.jpg");
     background-size: 100% 100%;
     z-index: 0;
 }
 
-#presentation-artistes .text {
+.presentation-artistes .text {
     padding-left: 3.5rem;
     padding-right: 14rem;
     padding-bottom: 17.9rem;
     max-width: 44.625rem;
 }
 
-#presentation-artistes p {
+.presentation-artistes p {
     color: #ffffff;
     padding-bottom: 2rem;
     font-size: 22px;
 }
 
-#presentation-artistes h1 {
+.presentation-artistes h1 {
     color: #ECF3B7;
     font-size: 45px;
     margin-bottom: 2rem;
     line-height: 4.28rem;
 }
 
-#presentation-artistes #cubes {
+.presentation-artistes #cubes {
     position: absolute;
     left: 19.43rem;
     top: -4rem;

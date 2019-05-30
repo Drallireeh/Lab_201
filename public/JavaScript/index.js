@@ -9,7 +9,7 @@ function displayMenu() {
     if (!menu_displayed) {
         menu_div.style.display = "flex";
         menu_displayed = true;
-        menu.innerHTML = `<img src="Assets/Images/menu/oeuf_casse.png" alt="Oeuf du menu">`
+        menu.innerHTML = `<img src="Assets/Images/menu/oeuf_casse.png" alt="Oeuf cassé du menu">`
     }
     else {
         menu_div.style.display = "none";

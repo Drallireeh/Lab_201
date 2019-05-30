@@ -8,61 +8,61 @@
     <title>Site</title>
     <link rel="stylesheet" href="css/template.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="JavaScript/Libraries/full-page-scroll.css">
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
     <script src="./JavaScript/Libraries/jquery-3.4.1.min.js"></script>
-    <script src="./JavaScript/Libraries/jquery.fullpage.min.js"></script>
+    <script src="./JavaScript/Libraries/full-page-scroll.js"></script>
 </head>
 
 <body>
-    <!-- <a href="administrateur.html">administateur</a> -->
-
     <div class="menu">
         <h1>MENU</h1>
         <button id="menu-button" type="menu">
             <img src="Assets/Images/menu/oeuf_menu.png" alt="Oeuf du menu">
         </button>
-        <!-- <a href="">
-            <img src="Assets/Images/menu/oeuf_menu.png" alt="Oeuf du menu">
-        </a> -->
+
         <div id="menu-div">
             <div>
-                <a href="#presentation-artistes">
-
-                    <img src="Assets/Images/menu/coquille1.png" alt="">
+                <a href="#1">
+                    <img src="Assets/Images/menu/coquille1.png" alt="coquille de l'oeuf du menu">
+                    AGAR AGAR<br> UNE HISTOIRE
                 </a>
             </div>
             <div>
-                <a href="">
-
-                    <img src="Assets/Images/menu/coquille2.png" alt="">
+                <a href="#2">
+                    THE DOG<br> AND THE FUTURE
+                    <img src="Assets/Images/menu/coquille2.png" alt="coquille de l'oeuf du menu">
                 </a>
             </div>
             <div>
-                <a href="">
-                    <img src="Assets/Images/menu/coquille3.png" alt="">
+                <a href="#3">
+                    <img src="Assets/Images/menu/coquille3.png" alt="coquille de l'oeuf du menu">
+                    TRACKLIST
                 </a>
             </div>
             <div>
-                <a href="">
-                    <img src="Assets/Images/menu/coquille4.png" alt="">
+                <a href="#4">
+                    CONCERTS<br> ET FESTIVALS
+                    <img src="Assets/Images/menu/coquille4.png" alt="coquille de l'oeuf du menu">
                 </a>
             </div>
             <div>
-                <a href="">
-                    <img src="" alt="">
+                <a href="#5">
+                    <img src="Assets/Images/menu/coquille5.png" alt="coquille de l'oeuf du menu">
+                    RESEAUX<br> SOCIAUX
                 </a>
             </div>
         </div>
     </div>
 
-    <div id="fullpage" class="main">
+    <div id="main" class="scroll-container">
         <section id="accueil">
             <img id="oeuf" src="Assets/Images/oeuf.png" alt="jaune d'oeuf">
             <img id="chien" src="Assets/Images/chien_ailes.png" alt="Chien ailé">
             <h1>AGAR AGAR</h1>
             <img id="scroll" src="Assets/Images/scroll.png" alt="icone de souris indiquant un scroll vers le bas">
         </section>
-        <section id="presentation-artistes">
+        <section class="presentation-artistes">
             <div id="cubes">
                 <img src="Assets/Images/rubikscubes.png" alt="images comprenant multes représentation de rubik's cube">
             </div>
@@ -208,7 +208,14 @@
     </div>
 
     <script>
-        $('#fullpage').fullpage();
+        new fullScroll({
+            mainElement: 'main',
+            displayDots: false,
+            sections: 'section',
+            animateTime: 0.7,
+            animateFunction: 'ease',
+            currentPosition: 0,
+        });
     </script>
     <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-firestore.js"></script>
