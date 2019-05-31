@@ -376,28 +376,19 @@ a:hover {
     margin-bottom: 7rem;
     padding-top: 8rem;
 }
-/* 
-#tracklist h2 {
-    color: white;
-    font-size: 35px;
-    margin-bottom: 5rem;
-} */
-/* 
-#tracklist h2:hover {
-    cursor: url("../Assets/Images/cursors/cursor_hover.png"), auto;
-} */
 
-#tracklist .tracklist-container {
+#tracklist #tracklist-container {
     z-index: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    filter: none;
 }
 
-#tracklist .tracklist-container #first-part,
-#tracklist .tracklist-container #second-part {
+#tracklist #tracklist-container #first-part,
+#tracklist #tracklist-container #second-part {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -407,18 +398,18 @@ a:hover {
             flex-direction: column;
 }
 
-#tracklist .tracklist-container #first-part {
+#tracklist #tracklist-container #first-part {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
 }
 
-#tracklist .tracklist-container #first-part div,
-#tracklist .tracklist-container #second-part div {
+#tracklist #tracklist-container #first-part div,
+#tracklist #tracklist-container #second-part div {
     margin-bottom: 1rem;
 }
 
-#tracklist .tracklist-container #second-part {
+#tracklist #tracklist-container #second-part {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -428,7 +419,7 @@ a:hover {
     position: absolute;
 }
 
-#tracklist .tracklist-container .gif-apercu:hover {
+#tracklist #tracklist-container .gif-apercu:hover {
     cursor: url("../Assets/Images/cursors/cursor_hover.png"), auto;
     opacity:0;
 }
@@ -483,6 +474,14 @@ a:hover {
     0%   {-webkit-transform: rotate(45deg);transform: rotate(45deg)}
     50% {-webkit-transform: rotate(-45deg);transform: rotate(-45deg)}
     100% {-webkit-transform: rotate(45deg);transform: rotate(45deg)}
+}
+
+iframe {
+    position: absolute;
+    visibility: hidden;
+    z-index: 1;
+    left: 45vw;
+    top: 30vh;
 }
 
 /*************************/
