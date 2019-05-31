@@ -384,7 +384,8 @@ a:hover {
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    filter: none;
+    -webkit-filter: none;
+            filter: none;
 }
 
 #tracklist #tracklist-container #first-part,
